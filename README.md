@@ -18,3 +18,9 @@ For this resubmission I will be creating the same game as last time, only this t
 ## The Build
 The first thing I did for the build was write out all the functions I thought I would need for this project and add them to run.py, I also creates a tests.py file so I could test various aspects of the project as I went along.  
 <img src="./images/print_board.png" alt="Image of game board">
+
+
+
+
+Code for print_board taken from here:
+https://www.youtube.com/watch?v=tF1WRCrd_HQ
