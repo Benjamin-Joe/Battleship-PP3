@@ -31,7 +31,8 @@ I played around with a welcome message for users before the game starts as pictu
 <img src="./images/welcome.png" alt="Testing welcome message">  
 The original grid code was taken from the video linked in the sources section. I decided to try a few things and make it my own. Below is my first attempt at a different approach for a grid. However the numbers print above the grid.  
 <img src="./images/grid-1.png" alt="Image of first attempt at game grid">
-
+The second attempt at creating my own version of the game board is below, it works well other than it looking a little untidy.  
+<img src="./images/grid-2.png" alt="Image of second attempt at game grid">
 
 Code for print_board taken from here:
 https://www.youtube.com/watch?v=tF1WRCrd_HQ

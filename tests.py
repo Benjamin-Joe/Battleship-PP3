@@ -37,26 +37,14 @@ letters_to_numbers = {
 
 # Testing ways to build board
 
-t = [
-    "1",
-    "2", 
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9"]
-for i in t:
-    print(i)
+def print_board(board):
+    print("  A B C D E F G H I ")
+    print("  -----------------")
+    row_number = 1
+    for i in range(0, 9):
+        board.append(['O'] * 9)
+        print(row_number, "|".join(board[i]))
+        row_number += 1
 
-
-def print_board(grid):
-    print("A B C D E F G H I ")
-    for i in range(0, 8):
-        grid.append(['O'] * 8)
-        print("|".join(grid[i]))
-
- 
 
 print_board(user_board)
