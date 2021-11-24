@@ -7,6 +7,7 @@
 
 <a name="resubmit"></a>
 ## Resubmit
+As this is a resubmit, I already had a lot of the code needed written out, so I have reused a lot of the code from the previous submission, but with all of the issues from last time addressed
 This is the resubmission for pp3 with code institute. The fail reason's were due to the following:  
 Bug causing ships to be placed ontop of eachother  
 Lack of bug fixes  
@@ -26,7 +27,8 @@ The first thing I did for the build was write out all the functions I thought I 
 ## Tests
 By adding tests.py file to the project I was able to test out various game aspects below and ensure everything was working correctly. The First test I did was create a name function that asks the user for their name. I used this to add personalised messages at the end of the game, increasing user experience.  
 <img src="./images/name.png" alt="Function asking for users to enter a name">
-
+I played around with a welcome message for users before the game starts as pictured below.  
+<img src="./images/welcome.png" alt="Testing welcome message">
 
 
 Code for print_board taken from here:
