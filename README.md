@@ -28,7 +28,9 @@ The first thing I did for the build was write out all the functions I thought I 
 By adding tests.py file to the project I was able to test out various game aspects below and ensure everything was working correctly. The First test I did was create a name function that asks the user for their name. I used this to add personalised messages at the end of the game, increasing user experience.  
 <img src="./images/name.png" alt="Function asking for users to enter a name">
 I played around with a welcome message for users before the game starts as pictured below.  
-<img src="./images/welcome.png" alt="Testing welcome message">
+<img src="./images/welcome.png" alt="Testing welcome message">  
+The original grid code was taken from the video linked in the sources section. I decided to try a few things and make it my own. Below is my first attempt at a different approach for a grid. However the numbers print above the grid.  
+<img src="./images/grid-1.png" alt="Image of first attempt at game grid">
 
 
 Code for print_board taken from here:
