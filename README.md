@@ -2,7 +2,8 @@
 
 ## Table Of Content
 1. [ Resubmit ](#resubmit)
-2. [ The Build  ](#build)
+2. [ Build  ](#build)
+3. [Tests](#tests)
 
 <a name="resubmit"></a>
 ## Resubmit
@@ -17,8 +18,14 @@ For this resubmission I will be creating the same game as last time, only this t
 <a name="build"></a>
 ## The Build
 The first thing I did for the build was write out all the functions I thought I would need for this project and add them to run.py, I also creates a tests.py file so I could test various aspects of the project as I went along.  
-<img src="./images/print_board.png" alt="Image of game board">
+<img src="./images/print_board.png" alt="Image of game board">  
+<img src="./images/empty-functions.png" alt=" Image of list of functions needed">
 
+
+<a name="tests"></a>
+## Tests
+By adding tests.py file to the project I was able to test out various game aspects below and ensure everything was working correctly. The First test I did was create a name function that asks the user for their name. I used this to add personalised messages at the end of the game, increasing user experience.  
+<img src="./images/name.png" alt="Function asking for users to enter a name">
 
 
 
