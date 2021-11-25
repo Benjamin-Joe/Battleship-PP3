@@ -38,6 +38,9 @@ letters_to_numbers = {
 # Testing ways to build board
 
 def print_board(board):
+    """
+    Game board for both user and computer
+    """
     print("  A B C D E F G H I ")
     print("  -----------------")
     row_number = 1
@@ -46,15 +49,22 @@ def print_board(board):
         print(row_number, "|".join(board[i]))
         row_number += 1
 
-def ship_placement():
+
+def user_input():
+    """
+    User input for choosing where to place their ships
+    """
     column = input("Select A Column Between A and I: ").upper()
     while column not in "ABCDEFGHI":
         print("Incorrect Input, Pick Between A and I")
         column = input("Select A Column Between A and I:").upper()
-
+        break
+    except KeyError:
     row = input("Select A Row Between 1 - 9: ")
     while row not in "123456789":
         print("Incorrect Input, Pick Between 1 And 9 ")
         row = input("Select A Row Between 1-9: ")
+
+
 print_board(user_board)
-ship_placement()
+user_input()
