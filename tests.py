@@ -46,5 +46,15 @@ def print_board(board):
         print(row_number, "|".join(board[i]))
         row_number += 1
 
+def ship_placement():
+    column = input("Select A Column Between A and I: ").upper()
+    while column not in "ABCDEFGHI":
+        print("Incorrect Input, Pick Between A and I")
+        column = input("Select A Column Between A and I:").upper()
 
+    row = input("Select A Row Between 1 - 9: ")
+    while row not in "123456789":
+        print("Incorrect Input, Pick Between 1 And 9 ")
+        row = input("Select A Row Between 1-9: ")
 print_board(user_board)
+ship_placement()
