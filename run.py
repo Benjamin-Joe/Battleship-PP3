@@ -5,11 +5,20 @@ H = Horizontal
 
 X = Hit
 O = Miss
-
 """
 
 
-letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8}
+letters_to_numbers = {
+    'A': 0,
+    'B': 1,
+    'C': 2,
+    'D': 3,
+    'E': 4,
+    'F': 5,
+    'G': 6,
+    'H': 7,
+    'I': 8
+    }
 
 length_of_ships = [2, 3, 4, 5, 6]
 user_board = [[" "] * 9 for i in range(9)]
@@ -28,22 +37,19 @@ def name():
     return
 
 
-# Code taken, referanced in readme
 def print_board(board):
-    """
-    A function for creating the gameboards
-    for the user, computer and guessboards
-    """
-    print("  A B C D E F G H I")
-    print("  __________________")
+    """A function for building all game boards
+    for battleships"""
+    print("  A B C D E F G H I ")
+    print("  -----------------")
     row_number = 1
-    for row in board:
-        print("%d|%s|" % (row_number, "|".join(row)))
+    for i in range(0, 9):
+        board.append(['O'] * 9)
+        print(row_number, "|".join(board[i]))
         row_number += 1
 
 
 print_board(user_board)
-
 """
 
 def place_ships():
