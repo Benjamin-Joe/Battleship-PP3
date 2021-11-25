@@ -58,13 +58,24 @@ def user_input():
     while column not in "ABCDEFGHI":
         print("Incorrect Input, Pick Between A and I")
         column = input("Select A Column Between A and I:").upper()
-        break
-    except KeyError:
     row = input("Select A Row Between 1 - 9: ")
     while row not in "123456789":
         print("Incorrect Input, Pick Between 1 And 9 ")
         row = input("Select A Row Between 1-9: ")
 
 
+def ship_placement(board):
+    """
+    Function for users placing their ships on the game board
+    and randomize ship placement for computer
+    """
+    # Loops through all ships
+    for ship_length in length_of_ships:
+        while True:
+            if board is computer_board:
+                orientation, row, column = random.choice(["H", "V"]), random.randint(0, 8), random.randint(0, 8)
+
+
 print_board(user_board)
+ship_placement(computer_board)
 user_input()
