@@ -103,9 +103,17 @@ def ship_placement(board):
                         print_board(user_board)
                         break
 
-
+# Check for ships to ensure they don't operlap
 def check_for_overlap(board, row, column, orientation, ship_length):
-    pass
+    if orientation == "H":
+        for i in range(column, column + ship_length):
+            if board[row][i] == "X":
+                return True
+    else:
+        for i in range(row, row +ship_length):
+            if board[1][column] == "X":
+                return True
+    return False
 
 
 def check_ship_fits(ship_length, row, column, orientation):
