@@ -78,17 +78,34 @@ def ship_placement(board):
                 if check_ship_fits(ship_length, row, column, orientation):
                     overlaps = check_for_overlap(board, row, column, orientation, ship_length)
                     if overlaps is False:
-                        # Placing ship horizontally
+                        # Placing ship horizontally for computer
                         if orientation == "H":
                             for i in range(column + column + ship_length):
                                 borad[row][i] = "X"
                             else:
-                                # Placing ship vertiaclly
+                                # Placing ship vertiaclly for computer
                                 for i in range(row, row +ship_length):
                                     board[i][column] = "X"
                             break
+            else:
+                # Placing ships for users
+                ship_placement = True
+                print('Place Ship With Length Of ' + str(ship_length))
+                row, column, orientation = user_input(ship_placement)
+                if check_ship_fits(ship_length, row, column, orientation):
+                    if check_for_overlap(board, row, column, orientation, ship_length) is False:
+                        if orientation == "H":
+                            for i in range(column, column + ship_length):
+                                board[row][i] = "X"
+                        else:
+                            for i in range(row, row +ship_length):
+                                board[i][column] = "X"
+                        print_board(user_board)
+                        break
 
 
+def check_for_overlap(board, row, column, orientation, ship_length):
+    pass
 
 
 def check_ship_fits(ship_length, row, column, orientation):
@@ -96,16 +113,11 @@ def check_ship_fits(ship_length, row, column, orientation):
 
 
 print_board(user_board)
-user_input()
+print_board(computer_board)
+ship_placement(user_board)
+ship_placement(computer_board)
+
 """
-
-
-
-
-
-
-
-def check_for_overlap():
 
 
 def user_input():

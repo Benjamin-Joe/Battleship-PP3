@@ -21,6 +21,9 @@ For this resubmission I will be creating the same game as last time, only this t
 The first thing I did for the build was write out all the functions I thought I would need for this project and add them to run.py, I also creates a tests.py file so I could test various aspects of the project as I went along.  
 <img src="./images/print_board.png" alt="Image of game board">  
 <img src="./images/empty-functions.png" alt=" Image of list of functions needed">  
+Creating the ship_placement function was a challenge as I could not get it to work initially. I needed to write a large amount of code in order to get it funcitonal without being able to test it as I went along. It took a few attempts, the initial draft of the function is below for the computer and user placement respectively:  
+<img src="./images/placing-ships-comp.png" alt="Function for placing computer ships">
+<img src="./images/placing-ships-user.png" alt="Function for placing users ships">  
 
 
 
@@ -34,7 +37,9 @@ The original grid code was taken from the video linked in the sources section. I
 <img src="./images/grid-1.png" alt="Image of first attempt at game grid">
 The second attempt at creating my own version of the game board is below, it works well other than it looking a little untidy.  
 <img src="./images/grid-2.png" alt="Image of second attempt at game grid">
-The first draft for the ship placement is pictured below. It asks users to choose between A and I and 1 and 9, this will be used later for asking users to place their ships on the game board.
+The first draft for the ship placement is pictured below. It asks users to choose between A and I and 1 and 9, this will be used later for asking users to place their ships on the game board.(NOTE: ship placement was later renamed to user_input as it made more sense.)
 <img src="./images/ship-placement.png" alt="Asking users for input">
+
 Code for print_board taken from here:
 https://www.youtube.com/watch?v=tF1WRCrd_HQ
+https://www.w3schools.com/python/ref_random_choice.asp
