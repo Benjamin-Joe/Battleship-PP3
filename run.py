@@ -1,4 +1,8 @@
+"""
+Battleships Game
+"""
 import random
+
 """
 Keys
 V = Vertical
@@ -50,20 +54,6 @@ def print_board(board):
         row_number += 1
 
 
-def user_input(ship_placement):
-    """
-    User input for choosing where to place their ships
-    """
-    column = input("Select A Column Between A and I: ").upper()
-    while column not in "ABCDEFGHI":
-        print("Incorrect Input, Pick Between A and I")
-        column = input("Select A Column Between A and I:").upper()
-    row = input("Select A Row Between 1 - 9: ")
-    while row not in "123456789":
-        print("Incorrect Input, Pick Between 1 And 9 ")
-        row = input("Select A Row Between 1-9: ")
-
-
 def ship_placement(board):
     """
     Function for users placing their ships on the game board
@@ -81,12 +71,13 @@ def ship_placement(board):
                         # Placing ship horizontally for computer
                         if orientation == "H":
                             for i in range(column + column + ship_length):
-                                borad[row][i] = "X"
-                            else:
-                                # Placing ship vertiaclly for computer
-                                for i in range(row, row +ship_length):
-                                    board[i][column] = "X"
-                            break
+                                board[row][i] = "X"
+                                
+                        else:
+                            # Placing ship vertiaclly for computer
+                            for i in range(row, row + ship_length):
+                                board[i][column] = "X"
+                        break
             else:
                 # Placing ships for users
                 ship_placement = True
@@ -98,10 +89,11 @@ def ship_placement(board):
                             for i in range(column, column + ship_length):
                                 board[row][i] = "X"
                         else:
-                            for i in range(row, row +ship_length):
+                            for i in range(row, row + ship_length):
                                 board[i][column] = "X"
                         print_board(user_board)
                         break
+
 
 # Check for ships to ensure they don't operlap
 def check_for_overlap(board, row, column, orientation, ship_length):
@@ -110,26 +102,39 @@ def check_for_overlap(board, row, column, orientation, ship_length):
             if board[row][i] == "X":
                 return True
     else:
-        for i in range(row, row +ship_length):
+        for i in range(row, row + ship_length):
             if board[1][column] == "X":
                 return True
     return False
 
 
+# Checking if ship fits on game grid
 def check_ship_fits(ship_length, row, column, orientation):
-    pass
+    if orientation == "H":
+        if column + ship_length > 0:
+            return False
+        else:
+            return True
+    else:
+        if row + ship_length > 9:
+            return False
+        else:
+            return True
 
 
-print_board(user_board)
-print_board(computer_board)
-ship_placement(user_board)
+def user_input(ship_placement):
+    """
+    User input for choosing where to place their ships
+    """
+    column = input("Select A Column Between A and I: ").upper()
+    while column not in "ABCDEFGHI":
+        print("Incorrect Input, Pick Between A and I")
+        column = input("Select A Column Between A and I:").upper()
+    row = input("Select A Row Between 1 - 9: ")
+    while row not in "123456789":
+        print("Incorrect Input, Pick Between 1 And 9 ")
+        row = input("Select A Row Between 1-9: ")
+
+
 ship_placement(computer_board)
-
-"""
-
-def hit_counter():
-
-
-def turn_ability():
-
-"""
+print_board(computer_board)

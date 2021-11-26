@@ -27,7 +27,8 @@ The first thing I did for the build was write out all the functions I thought I 
 Creating the ship_placement function was a challenge as I could not get it to work initially. I needed to write a large amount of code in order to get it funcitonal without being able to test it as I went along. It took a few attempts, the initial draft of the function is below for the computer and user placement respectively:  
 <img src="./images/placing-ships-comp.png" alt="Function for placing computer ships">
 <img src="./images/placing-ships-user.png" alt="Function for placing users ships">  
-
+Getting the ships to display randomly on the computer board took a few attempts. Each new game prints out the ships randomly for the computer, I printed three boards to test that it all works with no errors.  
+<img src="./images/computer_board.png" alt="Image of the computer board with ship locations visible">
 
 <a name="tests"></a>
 ## Tests
