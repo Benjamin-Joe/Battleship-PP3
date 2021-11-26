@@ -4,6 +4,9 @@
 1. [ Resubmit ](#resubmit)
 2. [ Build  ](#build)
 3. [Tests](#tests)
+4. [Sources](#sources)
+5. [Issues](#issues)
+6. [Deployment](#deployment)
 
 <a name="resubmit"></a>
 ## Resubmit
@@ -26,7 +29,6 @@ Creating the ship_placement function was a challenge as I could not get it to wo
 <img src="./images/placing-ships-user.png" alt="Function for placing users ships">  
 
 
-
 <a name="tests"></a>
 ## Tests
 By adding tests.py file to the project I was able to test out various game aspects below and ensure everything was working correctly. The First test I did was create a name function that asks the user for their name. I used this to add personalised messages at the end of the game, increasing user experience.  
@@ -40,6 +42,24 @@ The second attempt at creating my own version of the game board is below, it wor
 The first draft for the ship placement is pictured below. It asks users to choose between A and I and 1 and 9, this will be used later for asking users to place their ships on the game board.(NOTE: ship placement was later renamed to user_input as it made more sense.)
 <img src="./images/ship-placement.png" alt="Asking users for input">
 
-Code for print_board taken from here:
-https://www.youtube.com/watch?v=tF1WRCrd_HQ
-https://www.w3schools.com/python/ref_random_choice.asp
+
+<a name="sources"></a>
+## Sources
+I had help with this project from various websites and people, they are all listed below:  
+Antonio Rodrigues - My mentor, he has been incredibly helpful and gone above and beyond to ensure that I perform to the best of my abilities, He also has the patience of a god to put up with me :) .  
+Student Mentors - The student mentors on code institute have proven to be a lifesaver on a few occasions, great help :)  
+I used several websites in order to create this game, they are as follows:  
+[Initial GameBoard](https://www.youtube.com/watch?v=tF1WRCrd_HQ)  
+[Random Ship Generator](https://www.w3schools.com/python/ref_random_choice.asp)
+
+
+<a name="issues"></a>
+## Issues
+
+
+
+
+<a name="deployment"></a>
+## Deployment
+
+

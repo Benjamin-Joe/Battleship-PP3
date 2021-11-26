@@ -50,7 +50,7 @@ def print_board(board):
         row_number += 1
 
 
-def user_input():
+def user_input(ship_placement):
     """
     User input for choosing where to place their ships
     """
@@ -126,10 +126,6 @@ ship_placement(user_board)
 ship_placement(computer_board)
 
 """
-
-
-def user_input():
-
 
 def hit_counter():
 
