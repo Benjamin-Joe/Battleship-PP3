@@ -102,7 +102,7 @@ def check_for_overlap(board, row, column, orientation, ship_length):
                 return True
     else:
         for i in range(row, row + ship_length):
-            if board[1][column] == "X":
+            if board[i][column] == "X":
                 return True
     return False
 
@@ -133,7 +133,28 @@ def user_input(ship_placement):
                     break
             except KeyError:
                 print("INVALID Input Choose H Or V")
+        while True:
+            try:
+                row = input("Enter Row Number Between 1 And 9: ")
+                if row in '123456789':
+                    row = int(row) - 1
+                    break
+            except ValueError:
+                print('INVALID Input, Choose Between 1 And 9')
+        while True:
+            try:
+                column = input("Choose A Column Between A And I: ").upper()
+                if column in 'ABCDEFGHI':
+                    column = letters_to_numbers[column]
+                    break
+            except KeyError:
+                print('INVALID, Choose Between A And I')
+                return row, column, orientation
 
 
 ship_placement(computer_board)
 print_board(computer_board)
+
+
+ship_placement(user_board)
+print_board(user_board)
