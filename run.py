@@ -72,7 +72,6 @@ def ship_placement(board):
                         if orientation == "H":
                             for i in range(column + column + ship_length):
                                 board[row][i] = "X"
-                                
                         else:
                             # Placing ship vertiaclly for computer
                             for i in range(row, row + ship_length):
@@ -126,14 +125,14 @@ def user_input(ship_placement):
     """
     User input for choosing where to place their ships
     """
-    column = input("Select A Column Between A and I: ").upper()
-    while column not in "ABCDEFGHI":
-        print("Incorrect Input, Pick Between A and I")
-        column = input("Select A Column Between A and I:").upper()
-    row = input("Select A Row Between 1 - 9: ")
-    while row not in "123456789":
-        print("Incorrect Input, Pick Between 1 And 9 ")
-        row = input("Select A Row Between 1-9: ")
+    if ship_placement is True:
+        while True:
+            try:
+                orientation = input("Choose Orientation H(orizontal) Or V(ertical): ").upper()
+                if orientation == "H" or "V":
+                    break
+            except KeyError:
+                print("INVALID Input Choose H Or V")
 
 
 ship_placement(computer_board)
