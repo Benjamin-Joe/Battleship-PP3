@@ -152,6 +152,15 @@ def user_input(ship_placement):
                 return row, column, orientation
 
 
+def hit_counter(board):
+    """Function for counting hits for both user and computer"""
+    counter = 0
+    for row in board:
+        for column in row:
+            if column == "X":
+                counter += 1
+                return counter
+
 ship_placement(computer_board)
 print_board(computer_board)
 
