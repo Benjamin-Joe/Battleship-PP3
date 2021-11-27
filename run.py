@@ -42,6 +42,9 @@ def name():
     return
 
 
+name()
+
+
 def print_board(board):
     """A function for building all game boards
     for battleships"""
@@ -96,6 +99,9 @@ def ship_placement(board):
 
 # Check for ships to ensure they don't operlap
 def check_for_overlap(board, row, column, orientation, ship_length):
+    """
+    A function to check that ships don't operlap eachother
+    """
     if orientation == "H":
         for i in range(column, column + ship_length):
             if board[row][i] == "X":
@@ -109,6 +115,8 @@ def check_for_overlap(board, row, column, orientation, ship_length):
 
 # Checking if ship fits on game grid
 def check_ship_fits(ship_length, row, column, orientation):
+    """Function for checking ships are being places¨
+    in a location that fits"""
     if orientation == "H":
         if column + ship_length > 0:
             return False
@@ -150,6 +158,24 @@ def user_input(ship_placement):
             except KeyError:
                 print('INVALID, Choose Between A And I')
                 return row, column, orientation
+    else:
+        while True:
+            try:
+                row = input("Enter Row Number Between 1 And 9: ")
+                if row in '123456789':
+                    row = int(row) - 1
+                    break
+            except ValueError:
+                print('INVALID Input, Choose Between 1 And 9')
+        while True:
+            try:
+                column = input("Choose A Column Between A And I: ").upper()
+                if column in 'ABCDEFGHI':
+                    column = letters_to_numbers[column]
+                    break
+            except KeyError:
+                print('INVALID, Choose Between A And I')
+                return row, column
 
 
 def hit_counter(board):
@@ -161,9 +187,54 @@ def hit_counter(board):
                 counter += 1
                 return counter
 
+
+def turns(board):
+    """A function for both user turns
+    and computer turns"""
+    if board == user_guess_board:
+        row, column = user_input(user_guess_board)
+        if board[row][column] == "O":
+            turns(board)
+        elif board[row][column] == "X":
+            turns(board)
+        elif computer_board[row][column] == "X":
+            board[row][column] = "X"
+        else:
+            board[row][column] = "O"
+    else:
+        row, column = random.randint(0, 8), random.randint(0, 8)
+        if board[row][column] == "O":
+            turns(board)
+        elif board[row][column] == "X":
+            turns(board)
+        elif user_board[row][column] == "X":
+            board[row][column] = "X"
+        else:
+            board[row][column] = "O"
+
+
 ship_placement(computer_board)
 print_board(computer_board)
-
-
 ship_placement(user_board)
 print_board(user_board)
+
+
+while True:
+    # Player Turn
+    while True:
+        print('Your Guesses Are Recorded Below')
+        print('X Means Hit, O Is For Miss, Good Luck ' + str(name))
+        print_board(user_guess_board)
+        turns(user_guess_board)
+        break
+    if hit_counter(user_guess_board) == 20:
+        print("Yaay, You Won!!")
+        break
+    # Computer Turn
+    while True:
+        turns(computer_guess_board)
+        break
+    print_board(computer_guess_board)
+    if hit_counter(computer_guess_board) == 20:
+        print("HaHa, You Lose!!")
+        break
