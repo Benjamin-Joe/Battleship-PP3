@@ -29,6 +29,8 @@ Creating the ship_placement function was a challenge as I could not get it to wo
 <img src="./images/placing-ships-user.png" alt="Function for placing users ships">  
 Getting the ships to display randomly on the computer board took a few attempts. Each new game prints out the ships randomly for the computer, I printed three boards to test that it all works with no errors.  
 <img src="./images/computer_board.png" alt="Image of the computer board with ship locations visible">
+I then started to write out the user input function in detail. This allows for users to place items where they would like to and also it asks the users to pick the location of where the computers ships might be.  
+<img src ="./images/user-input.png" alt="Image of user-input function">
 
 <a name="tests"></a>
 ## Tests
@@ -56,7 +58,7 @@ I used several websites in order to create this game, they are as follows:
 
 <a name="issues"></a>
 ## Issues
-
+I came across several issues during the build. The first issue I came across was the board not printing out correctly, the numbers kept showing up above the board itself. To solve this I wrote out the board function again and noticed that I did not have all the items in the right place, so it was an easy fix. 
 
 
 
