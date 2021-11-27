@@ -11,7 +11,8 @@ import random
 # X = Hit
 # O = Miss
 
-
+# Letters to numbers function taken from elsewhere
+# Check readme
 letters_to_numbers = {
     'A': 0,
     'B': 1,

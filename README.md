@@ -29,8 +29,10 @@ Creating the ship_placement function was a challenge as I could not get it to wo
 <img src="./images/placing-ships-user.png" alt="Function for placing users ships">  
 Getting the ships to display randomly on the computer board took a few attempts. Each new game prints out the ships randomly for the computer, I printed three boards to test that it all works with no errors.  
 <img src="./images/computer_board.png" alt="Image of the computer board with ship locations visible">
-I then started to write out the user input function in detail. This allows for users to place items where they would like to and also it asks the users to pick the location of where the computers ships might be.  
+I then started to write out the user input function in detail. This allows for users to place items where they would like to and also it asks the users to pick the locations of where the computers ships might be.  
 <img src ="./images/user-input.png" alt="Image of user-input function">
+Once the user input was complete it was a case of bringing it all together and adding some error handling, and moving code from my previous submission over to this workspace
+
 
 <a name="tests"></a>
 ## Tests
@@ -44,7 +46,7 @@ The second attempt at creating my own version of the game board is below, it wor
 <img src="./images/grid-2.png" alt="Image of second attempt at game grid">
 The first draft for the ship placement is pictured below. It asks users to choose between A and I and 1 and 9, this will be used later for asking users to place their ships on the game board.(NOTE: ship placement was later renamed to user_input as it made more sense.)
 <img src="./images/ship-placement.png" alt="Asking users for input">
-
+For the rest of the code, I reused quite a bit from my last submission so it was already tested and worked correctly, But as a final test, I put the code through the pep 8 tester to ensure everything was up to scratch
 
 <a name="sources"></a>
 ## Sources
@@ -52,13 +54,18 @@ I had help with this project from various websites and people, they are all list
 Antonio Rodrigues - My mentor, he has been incredibly helpful and gone above and beyond to ensure that I perform to the best of my abilities, He also has the patience of a god to put up with me :) .  
 Student Mentors - The student mentors on code institute have proven to be a lifesaver on a few occasions, great help :)  
 I used several websites in order to create this game, they are as follows:  
-[Initial GameBoard](https://www.youtube.com/watch?v=tF1WRCrd_HQ)  
-[Random Ship Generator](https://www.w3schools.com/python/ref_random_choice.asp)
+[Initial GameBoard And Letters To Numbers](https://www.youtube.com/watch?v=tF1WRCrd_HQ)  
+[Random Ship Generator](https://www.w3schools.com/python/ref_random_choice.asp)  
+[ Stack Overflow ](https://stackoverflow.com/)  
+[FreeCodeCamp](https://www.freecodecamp.org/learn)  
 
 
 <a name="issues"></a>
 ## Issues
-I came across several issues during the build. The first issue I came across was the board not printing out correctly, the numbers kept showing up above the board itself. To solve this I wrote out the board function again and noticed that I did not have all the items in the right place, so it was an easy fix. 
+I came across several issues during the build. The first issue I came across was the board not printing out correctly, the numbers kept showing up above the board itself. To solve this I wrote out the board function again and noticed that I did not have all the items in the right place, so it was an easy fix.  
+The main issue I had was in the ship placement function, It was an error message stating  
+<img src="./images/error-msg.png" alt="Error message image">
+
 
 
 
