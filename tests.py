@@ -1,5 +1,5 @@
 import random
-"""Test file for battleships game
+"""Test file for battleships game"""
 def start():
     print('''
  |    |    |    ______               _______    _______    __________    ______
@@ -14,7 +14,7 @@ def start():
 
 start()
 
-"""
+
 
 # H = Horizontal
 # V = Vertical

@@ -3,14 +3,13 @@ Battleships Game
 """
 import random
 
-"""
-Keys
-V = Vertical
-H = Horizontal
 
-X = Hit
-O = Miss
-"""
+# Keys
+# V = Vertical
+# H = Horizontal
+
+# X = Hit
+# O = Miss
 
 
 letters_to_numbers = {
@@ -31,6 +30,21 @@ user_guess_board = [[" "] * 9 for i in range(9)]
 
 computer_board = [[" "] * 9 for i in range(9)]
 computer_guess_board = [[" "] * 9 for i in range(9)]
+
+
+def start():
+    print('''
+ |    |    |    ______               _______    _______    __________    ______
+ |    |    |   |         |          |          |       |   |    |   |   |
+ |    |    |   |         |          |          |       |   |    |   |   |
+ |    |    |   |------   |          |          |       |   |    |   |   |------
+ |    |    |   |         |          |          |       |   |    |   |   |
+ |____|____|   |______   |_______   |_______   |_______|   |    |   |   |______
+
+    ''')
+
+
+start()
 
 
 def name():
@@ -97,22 +111,6 @@ def ship_placement(board):
                         break
 
 
-# Check for ships to ensure they don't operlap
-def check_for_overlap(board, row, column, orientation, ship_length):
-    """
-    A function to check that ships don't operlap eachother
-    """
-    if orientation == "H":
-        for i in range(column, column + ship_length):
-            if board[row][i] == "X":
-                return True
-    else:
-        for i in range(row, row + ship_length):
-            if board[i][column] == "X":
-                return True
-    return False
-
-
 # Checking if ship fits on game grid
 def check_ship_fits(ship_length, row, column, orientation):
     """Function for checking ships are being places¨
@@ -129,6 +127,22 @@ def check_ship_fits(ship_length, row, column, orientation):
             return True
 
 
+# Check for ships to ensure they don't operlap
+def check_for_overlap(board, row, column, orientation, ship_length):
+    """
+    A function to check that ships don't operlap eachother
+    """
+    if orientation == "H":
+        for i in range(column, column + ship_length):
+            if board[row][i] == "X":
+                return True
+    else:
+        for i in range(row, row + ship_length):
+            if board[i][column] == "X":
+                return True
+    return False
+
+
 def user_input(ship_placement):
     """
     User input for choosing where to place their ships
@@ -136,8 +150,9 @@ def user_input(ship_placement):
     if ship_placement is True:
         while True:
             try:
-                orientation = input("Choose Orientation H(orizontal) Or V(ertical): ").upper()
-                if orientation == "H" or "V":
+                orientation = input(
+                    "Choose Orientation H(orizontal) Or V(ertical): ").upper()
+                if orientation == "H" or orientation == "V":
                     break
             except KeyError:
                 print("INVALID Input Choose H Or V")
@@ -157,7 +172,7 @@ def user_input(ship_placement):
                     break
             except KeyError:
                 print('INVALID, Choose Between A And I')
-                return row, column, orientation
+            return row, column, orientation
     else:
         while True:
             try:
@@ -175,7 +190,7 @@ def user_input(ship_placement):
                     break
             except KeyError:
                 print('INVALID, Choose Between A And I')
-                return row, column
+            return row, column
 
 
 def hit_counter(board):
@@ -185,7 +200,7 @@ def hit_counter(board):
         for column in row:
             if column == "X":
                 counter += 1
-                return counter
+    return counter
 
 
 def turns(board):
@@ -223,7 +238,7 @@ while True:
     # Player Turn
     while True:
         print('Your Guesses Are Recorded Below')
-        print('X Means Hit, O Is For Miss, Good Luck ' + str(name))
+        print('X Means Hit, O Is For Miss, Good Luck ' + str(username))
         print_board(user_guess_board)
         turns(user_guess_board)
         break
