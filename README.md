@@ -88,4 +88,11 @@ The game play is fairly easy to pick up. Users must choose an orientation for ea
 ## Deployment
 The deployment for this project was very easy to do. As it is deployed to heroku, it enables users to place the game without having an understanding of back end languages.  
 To deploy this project I followed these steps:  
-
+Add \n to all inputs in run.py file    
+pip freeze requirements (I did not have anything to add to this file as I did not install any packages)  
+Login to my heroku account  
+Create an app for this project in heruoku  
+Add appropriate config vars in settings on heroku  
+Add buildpacks on heroku of python and node.js as these are needed for the project to work when deployed, Python needed to be the first build pack, then node.js.  
+Then go to the deploy section, connect heroku to my github account.  
+Deploy Branch
