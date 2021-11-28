@@ -1,5 +1,8 @@
 # Battleships
 
+
+
+
 ## Table Of Content
 1. [ Resubmit ](#resubmit)
 2. [ Build  ](#build)
@@ -40,7 +43,7 @@ By adding tests.py file to the project I was able to test out various game aspec
 <img src="./images/name.png" alt="Function asking for users to enter a name">
 I played around with a welcome message for users before the game starts as pictured below.  
 <img src="./images/welcome.png" alt="Testing welcome message">  
-The original grid code was taken from the video linked in the sources section. I decided to try a few things and make it my own. Below is my first attempt at a different approach for a grid. However the numbers print above the grid.  
+The original grid code, letters to numbers idea and check ship fits/overlap sections were taken from the video linked in the sources section. I decided to try a few things and make it my own. Below is my first attempt at a different approach for a grid. However the numbers print above the grid.
 <img src="./images/grid-1.png" alt="Image of first attempt at game grid">
 The second attempt at creating my own version of the game board is below, it works well other than it looking a little untidy.  
 <img src="./images/grid-2.png" alt="Image of second attempt at game grid">
@@ -54,7 +57,7 @@ I had help with this project from various websites and people, they are all list
 Antonio Rodrigues - My mentor, he has been incredibly helpful and gone above and beyond to ensure that I perform to the best of my abilities, He also has the patience of a god to put up with me :) .  
 Student Mentors - The student mentors on code institute have proven to be a lifesaver on a few occasions, great help :)  
 I used several websites in order to create this game, they are as follows:  
-[Initial GameBoard And Letters To Numbers](https://www.youtube.com/watch?v=tF1WRCrd_HQ)  
+[Initial Game Idea And Letters To Numbers](https://www.youtube.com/watch?v=tF1WRCrd_HQ)  
 [Random Ship Generator](https://www.w3schools.com/python/ref_random_choice.asp)  
 [ Stack Overflow ](https://stackoverflow.com/)  
 [FreeCodeCamp](https://www.freecodecamp.org/learn)  
@@ -64,7 +67,10 @@ I used several websites in order to create this game, they are as follows:
 ## Issues
 I came across several issues during the build. The first issue I came across was the board not printing out correctly, the numbers kept showing up above the board itself. To solve this I wrote out the board function again and noticed that I did not have all the items in the right place, so it was an easy fix.  
 The main issue I had was in the ship placement function, It was an error message stating  
-<img src="./images/error-msg.png" alt="Error message image">
+<img src="./images/error-msg.png" alt="Error message image">  
+That was due to an indentation error which I fixed.  
+There was one issue that I kept getting, when the computer places their ships, sometimes they can be placed on top of one another, I read through the code and found the problem to be inside the ship placement function for the computer. I used the word not in the if statement that did not work very well. Since removing it I haven't played a game where ships ovelap. I started over 20 new games just to be sure!!  
+<img src="./images/placement-bug.png" alt="Image showing where I believe a bug came from causing the game to let ships overlap">  
 
 
 

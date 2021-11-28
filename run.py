@@ -25,7 +25,7 @@ letters_to_numbers = {
     'I': 8
     }
 
-length_of_ships = [2, 3, 4, 5, 6]
+length_of_ships = [1, 2, 3, 4, 5]
 user_board = [[" "] * 9 for i in range(9)]
 user_guess_board = [[" "] * 9 for i in range(9)]
 
@@ -239,8 +239,9 @@ def turns(board):
         else:
             board[row][column] = "O"
 
+
 ship_placement(computer_board)
-print_board(computer_board)
+print_board(computer_guess_board)
 ship_placement(user_board)
 print_board(user_board)
 
@@ -253,7 +254,7 @@ while True:
         print_board(user_guess_board)
         turns(user_guess_board)
         break
-    if hit_counter(user_guess_board) == 20:
+    if hit_counter(user_guess_board) == 15:
         print("Yaay, You Won!! ")
         break
     # Computer Turn
@@ -261,6 +262,6 @@ while True:
         turns(computer_guess_board)
         break
     print_board(computer_guess_board)
-    if hit_counter(computer_guess_board) == 20:
+    if hit_counter(computer_guess_board) == 15:
         print("HaHa, You Lose!! Press Reset To Play Again")
         break
