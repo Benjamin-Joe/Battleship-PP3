@@ -9,17 +9,18 @@
 3. [Tests](#tests)
 4. [Sources](#sources)
 5. [Issues](#issues)
-6. [Deployment](#deployment)
+6. [GamePlay](#gameplay)
+7. [Deployment](#deployment)
 
 <a name="resubmit"></a>
 ## Resubmit
-As this is a resubmit, I already had a lot of the code needed written out, so I have reused a lot of the code from the previous submission, but with all of the issues from last time addressed
+As this is a resubmit, I already had a lot of the code needed written out, so I reused a lot of the code from the previous submission, but with all of the issues from last time addressed
 This is the resubmission for pp3 with code institute. The fail reason's were due to the following:  
 Bug causing ships to be placed ontop of eachother  
 Lack of bug fixes  
 Lack of content in readme  
 Did not meet pep 8 requirements,  
-For this resubmission I will be creating the same game as last time, only this time with the improvements necessary to reach a passing grade. 
+For this resubmission I have recreated the same game as last time, only this time with the improvements necessary to reach a passing grade. 
 
 
 <a name="build"></a>
@@ -49,7 +50,9 @@ The second attempt at creating my own version of the game board is below, it wor
 <img src="./images/grid-2.png" alt="Image of second attempt at game grid">
 The first draft for the ship placement is pictured below. It asks users to choose between A and I and 1 and 9, this will be used later for asking users to place their ships on the game board.(NOTE: ship placement was later renamed to user_input as it made more sense.)
 <img src="./images/ship-placement.png" alt="Asking users for input">
-For the rest of the code, I reused quite a bit from my last submission so it was already tested and worked correctly, But as a final test, I put the code through the pep 8 tester to ensure everything was up to scratch
+For the rest of the code, I reused quite a bit from my last submission so it was already tested and worked correctly, But as a final test, I put the code through the pep 8 tester to ensure everything was up to scratch  
+<img src="./images/pep-8.png" alt="pep 8 test results">
+
 
 <a name="sources"></a>
 ## Sources
@@ -61,7 +64,7 @@ I used several websites in order to create this game, they are as follows:
 [Random Ship Generator](https://www.w3schools.com/python/ref_random_choice.asp)  
 [ Stack Overflow ](https://stackoverflow.com/)  
 [FreeCodeCamp](https://www.freecodecamp.org/learn)  
-
+I also took inspiration from other people's battleship games on git hub. No code was taken from anyone elses to my knowledge, I only looked at other to see in what directions other people went in and how I could make mine a little different. I did however take the name function from stack overflow, but was unable to relocate the original post.  
 
 <a name="issues"></a>
 ## Issues
@@ -71,8 +74,13 @@ The main issue I had was in the ship placement function, It was an error message
 That was due to an indentation error which I fixed.  
 There was one issue that I kept getting, when the computer places their ships, sometimes they can be placed on top of one another, I read through the code and found the problem to be inside the ship placement function for the computer. I used the word not in the if statement that did not work very well. Since removing it I haven't played a game where ships ovelap. I started over 20 new games just to be sure!!  
 <img src="./images/placement-bug.png" alt="Image showing where I believe a bug came from causing the game to let ships overlap">  
+There were three unsolved problems left in the project they are pictures below. I did not change them as they did not cause any issues to my knowledge and they also didn't flag up in the pep 8 test so I felt there was issue with leaving them in.  
+<img src="./images/problems.png" alt="Problems image">
 
 
+<a name="gameplay"></a>
+## GamePlay
+The game play is fairly easy to pick up. Users must choose an orientation for each ship, either horizontal or vertical, then they must pick a column and row in which to place their ship. Once all ships are placed the game will begin, Users can also enter a name if they like, a little welcome message. The ship sizes are 1,2,3,4,5, I made them smaller than the normal game because I believe that it is easier to place ships on the board if they are smaller. The user will try to guess where the computer had hidden their ships, whilst the computer also tries to guess where the users ships are. First one to do so wins! :)
 
 
 <a name="deployment"></a>
