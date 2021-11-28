@@ -1,6 +1,6 @@
 # Battleships
 
-
+<img src="./images/deployed.png" alt="Deployed image of game">
 
 
 ## Table Of Content
@@ -25,7 +25,7 @@ For this resubmission I have recreated the same game as last time, only this tim
 
 <a name="build"></a>
 ## The Build
-The first thing I did for the build was write out all the functions I thought I would need for this project and add them to run.py, I also creates a tests.py file so I could test various aspects of the project as I went along.  
+The first thing I did for the build was write out all the functions I thought I would need for this project and add them to run.py, I also creates a tests file so I could test various aspects of the project as I went along.  
 <img src="./images/print_board.png" alt="Image of game board">  
 <img src="./images/empty-functions.png" alt=" Image of list of functions needed">  
 Creating the ship_placement function was a challenge as I could not get it to work initially. I needed to write a large amount of code in order to get it funcitonal without being able to test it as I went along. It took a few attempts, the initial draft of the function is below for the computer and user placement respectively:  

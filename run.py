@@ -162,7 +162,7 @@ def user_input(ship_placement):
         while True:
             try:
                 orientation = input(
-                    "Choose Orientation H(orizontal) Or V(ertical):\n ").upper()
+                    "Choose Orientation H(orizontal) Or V(ertical):\n").upper()
                 if orientation == "H" or orientation == "V":
                     break
             except KeyError:
