@@ -40,7 +40,7 @@ Once the user input was complete it was a case of bringing it all together and a
 
 <a name="tests"></a>
 ## Tests
-By adding tests.py file to the project I was able to test out various game aspects below and ensure everything was working correctly. The First test I did was create a name function that asks the user for their name. I used this to add personalised messages at the end of the game, increasing user experience.  
+By adding a temporary tests file to the project I was able to test out various game aspects below and ensure everything was working correctly. The First test I did was create a name function that asks the user for their name. I used this to add personalised messages at the end of the game, increasing user experience.  
 <img src="./images/name.png" alt="Function asking for users to enter a name">
 I played around with a welcome message for users before the game starts as pictured below.  
 <img src="./images/welcome.png" alt="Testing welcome message">  
@@ -64,6 +64,7 @@ I used several websites in order to create this game, they are as follows:
 [Random Ship Generator](https://www.w3schools.com/python/ref_random_choice.asp)  
 [ Stack Overflow ](https://stackoverflow.com/)  
 [FreeCodeCamp](https://www.freecodecamp.org/learn)  
+[CodeInstitute](https://learn.codeinstitute.net/dashboard)  
 I also took inspiration from other people's battleship games on git hub. No code was taken from anyone elses to my knowledge, I only looked at other to see in what directions other people went in and how I could make mine a little different. I did however take the name function from stack overflow, but was unable to relocate the original post.  
 
 <a name="issues"></a>
@@ -85,5 +86,6 @@ The game play is fairly easy to pick up. Users must choose an orientation for ea
 
 <a name="deployment"></a>
 ## Deployment
-
+The deployment for this project was very easy to do. As it is deployed to heroku, it enables users to place the game without having an understanding of back end languages.  
+To deploy this project I followed these steps:  
 

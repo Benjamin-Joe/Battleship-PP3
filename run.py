@@ -55,7 +55,7 @@ def name():
     """
     A function for getting the user's name
     """
-    username = str(input("Choose What We Call You, Or Just Press Enter: "))
+    username = str(input("Choose What We Call You, Or Just Press Enter:\n "))
     print("Welcome To Battleships " + str(username))
     return
 
@@ -162,14 +162,14 @@ def user_input(ship_placement):
         while True:
             try:
                 orientation = input(
-                    "Choose Orientation H(orizontal) Or V(ertical): ").upper()
+                    "Choose Orientation H(orizontal) Or V(ertical):\n ").upper()
                 if orientation == "H" or orientation == "V":
                     break
             except KeyError:
                 print("INVALID Input Choose H Or V")
         while True:
             try:
-                row = input("Enter Row Number Between 1 And 9: ")
+                row = input("Enter Row Number Between 1 And 9:\n ")
                 if row in '123456789':
                     row = int(row) - 1
                     break
@@ -177,7 +177,7 @@ def user_input(ship_placement):
                 print('INVALID Input, Choose Between 1 And 9')
         while True:
             try:
-                column = input("Choose A Column Between A And I: ").upper()
+                column = input("Choose A Column Between A And I:\n ").upper()
                 if column in 'ABCDEFGHI':
                     column = letters_to_numbers[column]
                     break
@@ -187,7 +187,7 @@ def user_input(ship_placement):
     else:
         while True:
             try:
-                row = input("Enter Row Number Between 1 And 9: ")
+                row = input("Enter Row Number Between 1 And 9:\n ")
                 if row in '123456789':
                     row = int(row) - 1
                     break
@@ -195,7 +195,7 @@ def user_input(ship_placement):
                 print('INVALID Input, Choose Between 1 And 9')
         while True:
             try:
-                column = input("Choose A Column Between A And I: ").upper()
+                column = input("Choose A Column Between A And I:\n ").upper()
                 if column in 'ABCDEFGHI':
                     column = letters_to_numbers[column]
                     break
